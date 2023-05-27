@@ -26,7 +26,7 @@ const PokemonList = () => {
     return (
         <div className="pokelist">
             {pokemonList.map((pokemon) => (
-                <div className="card">
+                <div className="card" key={pokemon.name}>
                     <p>{pokemon.name}</p>
                     <img src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${extractPokemonId(pokemon.url)}.png`} alt={pokemon.name} />
                 </div>
